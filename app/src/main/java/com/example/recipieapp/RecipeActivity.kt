@@ -48,7 +48,7 @@ binding.shadowImage.visibility= View.GONE
                 binding.fullScreen.setColorFilter(null)
                 Glide.with(this).load(img).into(binding.itemImage)
                 binding.shadowImage.visibility= View.GONE
-                imageCrop=!imageCropāā
+                imageCrop=!imageCrop
             }
         }
         binding.backDes.setOnClickListener {
