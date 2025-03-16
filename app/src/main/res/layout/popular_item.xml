@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_marginStart="22dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="210dp"
+        android:layout_height="190dp"
+        app:cardCornerRadius="20dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="202dp">
+
+        <ImageView
+            android:id="@+id/popular_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/pizza_sample" />
+
+        <ImageView
+            android:id="@+id/img_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/image_btm_overlay" />
+
+        <TextView
+            android:id="@+id/popular_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/popians_semi"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="22dp"
+            android:text="my name is prakhar"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/popular_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/popians_semi"
+            android:maxLength="7"
+            android:text="⏲ 20 Mins"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

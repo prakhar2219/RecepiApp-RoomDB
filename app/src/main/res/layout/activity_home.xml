@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_home" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="-10dp"
+        android:rotation="-10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_assest1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="81dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/popians_semi"
+        android:text="Hello"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/popians_semi"
+        android:text="Foodie!"
+        android:textColor="@color/Purple_500"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="Which Indain food would you like to cook?"
+        android:textColor="#424242"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/Search"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/searchview"
+        android:ems="10"
+        android:focusable="false"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Search Recipe"
+        android:inputType="none"
+        android:paddingStart="47dp"
+        android:textColorHint="#585858"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="22dp"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/search_ic" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/popians_semi"
+        android:text="Categories"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/Search" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/Salad"
+                style="@style/my_style"
+                android:background="@drawable/category_card_bc"
+                app:srcCompat="@drawable/category_salad" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Salad"
+                android:layout_alignStart="@id/Salad"
+                android:layout_alignEnd="@id/Salad"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="-3dp"
+                android:text="Salad"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/MainDish"
+                style="@style/my_style"
+                android:layout_margin="11dp"
+                android:layout_toEndOf="@id/Salad"
+                android:background="@drawable/category_card_bc"
+                app:srcCompat="@drawable/drinks" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/MainDish"
+                android:layout_alignStart="@id/MainDish"
+                android:layout_alignEnd="@id/MainDish"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="-3dp"
+                android:gravity="center"
+                android:text="Main"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/Drinks"
+                style="@style/my_style"
+                android:layout_margin="11dp"
+                android:layout_toEndOf="@id/MainDish"
+                android:background="@drawable/category_card_bc"
+                app:srcCompat="@drawable/catergory_drinks" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Drinks"
+                android:layout_alignStart="@id/Drinks"
+                android:layout_alignEnd="@id/Drinks"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="-3dp"
+                android:gravity="center"
+                android:text="Drinks"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/Desert"
+                style="@style/my_style"
+                android:layout_margin="11dp"
+                android:layout_toEndOf="@id/Drinks"
+                android:background="@drawable/category_card_bc"
+                app:srcCompat="@drawable/category_dessert" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Desert"
+                android:layout_alignStart="@id/Desert"
+                android:layout_alignEnd="@id/Desert"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="-3dp"
+                android:gravity="center"
+                android:text="Desserts"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/popians_semi"
+        android:text="Popular recipie"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_popular"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:listitem="@layout/popular_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>
