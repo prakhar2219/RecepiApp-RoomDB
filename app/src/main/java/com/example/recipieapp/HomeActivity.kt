@@ -24,6 +24,7 @@ class HomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        binding.Desert.setOnClickListener {  }
         binding.Salad.setOnClickListener {
             val intent = Intent(this@HomeActivity, CategoryActivity::class.java)
             intent.putExtra("TITLE", "Salad")
